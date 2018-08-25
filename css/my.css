@@ -1,0 +1,295 @@
+html{
+	font-size: 62.5%;
+}
+body{
+	background-image: url(../images/fond_jaune.png);
+	color: #181818;
+	font-size: 1.2rem;
+	font-family: 'Trebuchet MS', Arial, sans-serif;
+
+}
+.wrapper{
+	max-width: 85%;
+	margin: 0 auto; /* comme il s'agit d'une DIV 
+	elle n'a pas de marges donc je peux mettre directement à 'auto' */
+
+}
+/* ajout de POLICES spécifiques */
+@font-face{
+	font-family: 'BallparkWeiner';
+	src: url('../polices/ballpark.eot');
+	src: url('../polices/ballpark.eot?#iefix') format('embedded-opentype'),
+		  url('../polices/ballpark.woff') format('woff'),
+		  url('../polices/ballpark.ttf') format('truetype'),
+		  url('../polices/ballpark.svg#BallparkWeiner') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face{
+	font-family: 'Dayrom';
+	src: url('../polices/dayrom.eot');
+	src: url('../polices/dayrom.eot?#iefix') format('embedded-opentype'),
+		  url('../polices/dayrom.woff') format('woff'),
+		  url('../polices/dayrom.ttf') format('truetype'),
+		  url('../polices/dayrom.svg#Dayrom') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+.ballpark{
+	font-family: 'BallparkWeiner', 'Comic Sans', cursive;
+	font-size: 4rem;
+	padding-left: 65px;
+	margin-top: -20px;
+	color: #000; /* couleur NOIRE */
+
+	/* je dois le mettre le background-color ? */
+	background-color: inherit;
+}
+.dayrom, section h1, section h2, footer h2{
+	font-family: 'Dayrom', 'Times New Roman', serif;
+	/* quand j'ai un background-color, je DOIS avoir un color sinon non ! 
+	color: inherit; /* couleur du PARENT (body) */
+
+	/* je dois le mettre le background-color ?  non !
+	background-color:  inherit;
+    */
+}
+.font-size18{
+	font-size: 1.8rem;
+	margin-top: -12px;
+}
+
+h1, h2, .nav-principal{
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+h2{
+	font-size: 1.8rem;
+} 
+
+/* la navigation principale */
+/**********************************/
+nav ul li{
+	display: inline-block;
+	margin: 0 10px 5px 0;
+	
+}
+.nav-principal{
+	float: right;
+	margin-top: 40px;
+
+}
+.nav-principal a{
+	text-decoration: none;
+	color: #181818;	
+}
+a.current{
+	color: #8f2d2d;
+	padding-bottom: 2px;
+	border-bottom: solid #8f2d2d 3px; /* pour éviter que le curseur ne saute 
+	lorsque je passe sur le lien */
+}
+.nav-principal a:hover{
+	color: #8f2d2d;
+	padding-bottom: 2px;
+	border-bottom: solid #8f2d2d 3px;
+}
+/************************************************/
+.decoration{
+	background-image: url(../images/separateur.png);
+	min-height: 6px;
+	background-repeat: repeat-x;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+/* mon point 0 0 du pont représente l'element relatif */
+#pont{
+	background-image: url(../images/sanfrancisco.jpg);
+	background-repeat: no-repeat;
+	min-height: 219px;
+	position: relative;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	box-shadow: 6px 6px 0px black;
+}
+.legende-photo{
+	position: absolute;
+	bottom: 0;
+	color: white;
+	background-color: rgba(0,0,0,0.7);
+	left: 0;
+	right: 0;
+	padding-left: 5px;
+	border-radius: 5px;
+
+}
+.legende-photo div{
+	margin-top: 15px;
+}
+.bouton{
+	float: right;
+	padding: 5px 10px;
+	color: white;
+	background-color: red;
+	border-radius: 15px;
+	margin-bottom: 15px;
+	margin-right: 5px;
+	text-decoration: none;	
+}
+/**********************************************************/
+/* section : article et aside */
+
+.principal, .aside{
+	display: inline-block;  
+	vertical-align: top;
+}
+.principal{
+	max-width: calc(100% - 320px);
+	text-align: justify;
+	margin-right: 10px;
+}
+aside{
+	background-color: #61615b; 
+	
+	color: #fff;
+	max-width: 300px;
+	padding-bottom: 10px;
+	position: relative;
+	border-radius: 5px;
+	
+	
+}
+aside .fleche{
+	background: url(../images/bulle.png) no-repeat;
+	height: 20px;
+	width: 20px;
+	position: absolute;
+	top: 150px;
+	left: -10px;
+
+}
+
+aside p{
+	padding: 0 7px;
+	text-align: justify;
+}
+aside > h2{
+	text-align: center;
+
+}
+
+/* pour aligner l'enfant(les images) horizontalement, 
+je vais placer le text-align sur le block parent ici la figure */
+
+.nav-aside > figure{
+	margin: 0;
+	text-align: center;
+}
+.image-centre{
+	margin: 0 47px;
+}
+.ico-epingle{
+	background-image: url(../images/ico_epingle.png);
+	background-repeat: no-repeat;
+	padding-left: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/******************************************************************/
+/*  Le footer */
+
+.ombre{
+	background: url(../images/ico_top.png) no-repeat center,
+				 url(../images/separateur.png) repeat-x,
+				 url(../images/ombre.png) repeat-x;
+
+	min-height: 25px;
+	
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+.tweets, .photos, .amis{
+	display: inline-block;
+	/* pour ne pas que les 3 blocks apparaissent en ESCALIER _ - 
+	J'indique un vertical-align: top; */
+	vertical-align: top;
+	width: calc(100% / 3 - 5px);
+}
+
+.amis1, .amis2{
+	display: inline-block;
+	/* pour ne pas que les 2 blocks apparaissent en ESCALIER _ - 
+	J'indique un vertical-align: top; */
+	vertical-align: top;
+	/* 2X20px de padding left des puces + 4 px de l'inline-block */
+	width: calc(100% / 2 - 45px);
+	padding: 20px;
+	list-style-image : url(../images/ico_liensexterne.png);
+
+}
+
+.amis a{
+	text-decoration: none;
+	color: #8f2d2d;
+}
+
+
+/**********************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.dessous{
+	clear: both;
+}
+.ombre-footer{
+	background-image: url(../images/ombre.png);
+	background-repeat: repeat-x;
+}
+.top-footer{
+	background-image: url(../images/ico_top.png);
+	padding-top: 1em;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+}*/
+.tweet{
+	padding-top: 3em;
+}
